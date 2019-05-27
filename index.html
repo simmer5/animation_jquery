@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<title>6 uzduotis</title>
+<style>
+  body {
+    background-color: #A8EF7D;
+  }
+  #remas{
+    width:auto;
+    height:90vh;
+    border:1px solid black;
+  } 
+  #kvadratas{
+    width:100px;
+    height:100px;
+    left:20px;
+    border:1px solid black;
+    background-color:red;
+    position:absolute;
+}
+
+#kelias{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    font-size:80px;
+    text-align: center;
+    position:absolute;
+}
+    
+  </style>
+  <script src="jquery.js"></script>
+    <script>
+ $(document).ready (function(){
+ $("#start").click(function(){
+ $("#kvadratas")
+ .animate({"left":"+=450px"},"fast")//1.
+ .animate({"top":"200","left":"750"},"slow")//2
+ .animate({"top":"400","left":"950"},"slow")//3
+ .animate({"top":"400","left":"-=550px"},2000)//4.
+ .animate({"top":"200","left":"150"},"slow")//5.
+ .animate({"top":"65","left":"20"},"slow");
+ });
+ 
+ });
+  
+  </script>
+</head>
+<body>
+  <input type="button" id="start" value="Pradėti animaciją"/>
+  <br><br>
+ <div id="remas">
+ <br>
+  <div id="kvadratas"></div>
+  <div id="kelias" style="left:470px;">1.</div>
+  <div id="kelias" style="top:200px; left:750px;">2.</div>
+  <div id="kelias" style="top:400px; left:950px;">3.</div>
+  <div id="kelias" style="top:400px; left:400px;">4.</div>
+  <div id="kelias" style="top:200px; left:150px;">5.</div>
+
+ </div>
+  
+</body>
+</html>
